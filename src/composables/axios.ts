@@ -6,6 +6,7 @@ export function useAxios () {
     headers: {
       'Authorization': 'Basic bWJlbmk6QE1iZW5pMjIwOQ==',
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
     }
   });
 
