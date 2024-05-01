@@ -7,7 +7,7 @@ const uaxios = useAxios();
 
 <template>
   <div>
-    <button @click="uaxios.getActiveConnections()">Test</button>
+    <button @click="uaxios.getIdentity()">Test</button>
   </div>
 </template>
 

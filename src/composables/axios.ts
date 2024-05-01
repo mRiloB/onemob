@@ -2,18 +2,17 @@ import axios from 'axios';
 
 export function useAxios () {
   const api = axios.create({
-    baseURL: 'https://aws.onemob.com.br:445/rest',
+    baseURL: 'https://aws.onemob.com.br:4310/rest',
     headers: {
-      'Authorization': 'Basic bWJlbmk6QE1iZW5pMjIwOQ==',
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+      'Authorization': 'Basic TW9ieTpIb3J1c0AxODk0ISEhIw==',
+      'Content-Type': 'application/json'
     }
   });
 
-  const getActiveConnections = async () => {
-    const res = await api.get('/ppp/active');
+  const getIdentity = async () => {
+    const res = await api.get('/system/identity');
     console.log('data:', res.data);
   };
 
-  return { getActiveConnections };
+  return { getIdentity };
 }
